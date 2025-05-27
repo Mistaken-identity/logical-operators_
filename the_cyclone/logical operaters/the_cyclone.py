@@ -10,4 +10,4 @@ elif height < 137 and credits >= 10:
 elif credits < 10 and height >= 137:
   print("You don't have enough credits to ride.")
 else:
-  print("You are not tall enough for this ride, nor do you have enough credits.")
+  print("You are not tall enough for this ride, nor do you have enough credits.<br>Simiti will direct you where short broke nigga are")
