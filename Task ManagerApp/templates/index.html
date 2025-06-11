@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form action="/add" method="POST">
+        <input name="title" placeholder="Task title" required>
+        <textarea name="description" placeholder="Description"></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <strong>{{ task.title }}</strong> - {{ task.description }}
+            [<a href="/toggle/{{ task.id }}">{{ 'Done' if not task.done else 'Undo' }}</a>]
+            [<a href="/delete/{{ task.id }}">Delete</a>]
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
